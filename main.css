@@ -23,6 +23,7 @@ h1 {
   gap: 30px;
 }
 
+/* keeps images from distorting */
 .img-box {
   aspect-ratio: 3 / 4;
   overflow: hidden;
@@ -38,5 +39,65 @@ h1 {
   animation-timing-function: ease-in-out;
 }
 
+/* 10 basic animations */
 .img-box:nth-child(1) img { animation-name: fade; }
 .img-box:nth-child(2) img { animation-name: slowZoom; }
+.img-box:nth-child(3) img { animation-name: floatUp; }
+.img-box:nth-child(4) img { animation-name: tilt; }
+.img-box:nth-child(5) img { animation-name: blurIn; }
+.img-box:nth-child(6) img { animation-name: pulse; }
+.img-box:nth-child(7) img { animation-name: slide; }
+.img-box:nth-child(8) img { animation-name: rotateSoft; }
+.img-box:nth-child(9) img { animation-name: contrastShift; }
+.img-box:nth-child(10) img { animation-name: breathe; }
+
+/* animations */
+@keyframes fade {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes slowZoom {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes floatUp {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes tilt {
+  0%,100% { transform: rotate(0deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+@keyframes blurIn {
+  0%,100% { filter: blur(0); }
+  50% { filter: blur(2px); }
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes slide {
+  0%,100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+@keyframes rotateSoft {
+  0%,100% { transform: rotate(0deg); }
+  50% { transform: rotate(-1deg); }
+}
+
+@keyframes contrastShift {
+  0%,100% { filter: contrast(100%); }
+  50% { filter: contrast(130%); }
+}
+
+@keyframes breathe {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
